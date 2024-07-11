@@ -1,10 +1,10 @@
 import RPi.GPIO as GPIO
 import time
 
-# Configuración de los pines GPIO para los LEDs RGB y el buzzer
+# Asigno pines para los LED´s y el buzzer
 LED_RED_PIN = 19
-LED_GREEN_PIN = 13  # Corregido
-LED_BLUE_PIN = 26    # Corregido
+LED_GREEN_PIN = 13  
+LED_BLUE_PIN = 26   
 BUZZER_PIN = 22
 
 GPIO.setmode(GPIO.BCM)
@@ -13,7 +13,7 @@ GPIO.setup(LED_GREEN_PIN, GPIO.OUT)
 GPIO.setup(LED_BLUE_PIN, GPIO.OUT)
 GPIO.setup(BUZZER_PIN, GPIO.OUT)
 
-# Funciones para controlar los LEDs RGB y el buzzer
+# Establezco funciones para controlar los LEDs RGB y el buzzer
 def set_led_color(color):
     GPIO.output(LED_RED_PIN, GPIO.LOW)
     GPIO.output(LED_GREEN_PIN, GPIO.LOW)
